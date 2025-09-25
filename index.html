@@ -69,26 +69,25 @@
                     <button class="confirm-btn" onclick="confirmOrder()">Conferma Ordine</button>
                 </div>
             </div>
-            
-            <!-- THANK YOU SECTION -->
-            <div id="thankYou" class="section">
-                <div class="thank-you">
-                    <h1>🎉 Grazie per il tuo ordine!</h1>
-                    <p>Il tuo ordine è stato ricevuto con successo.</p>
-                    <p>Lo staff di cucina è già al lavoro per preparare le tue delizie!</p>
-                    <p>⏱️ Tempo di attesa stimato: 15-20 minuti</p>
-                    <div class="closing-timer">
-                        L'app si chiuderà automaticamente tra <span id="countdown">5</span> secondi...
-                    </div>
-                </div>
+            <!-- Sostituisci il contenuto della sezione thankYou -->
+<div id="thankYou" class="section">
+    <div class="container">
+        <div style="text-align: center; padding: 40px 20px;">
+            <div style="font-size: 80px; margin-bottom: 20px;">✅</div>
+            <h1 style="color: #27ae60; margin-bottom: 20px;">Ordine Confermato!</h1>
+            <div id="orderDetails" style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <!-- I dettagli dell'ordine vengono inseriti qui via JavaScript -->
             </div>
-        </div>
-        
-        <div class="cart-summary" id="cartSummary" onclick="showSection('order')">
-            🛒 <span id="cartCount">0</span> articoli - €<span id="cartTotal">0.00</span>
+            <p style="color: #666; margin-bottom: 30px;">
+                Il tuo ordine è stato inviato in cucina. Grazie!
+            </p>
+            <p style="color: #999;">
+                Torna al menu in <span id="countdown" style="font-weight: bold;">10</span> secondi...
+            </p>
         </div>
     </div>
+</div>
 
-    <script src="script.js"></script>
+    <script src="scrupt.js"></script>
 </body>
 </html>
