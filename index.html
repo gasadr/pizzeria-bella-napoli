@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Bella Napoli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍕 Pizzeria Bella Napoli</h1>
+            <div class="table-info" id="tableInfo">Tavolo #<span id="tableNumber">1</span></div>
+        </div>
+        
+        <div class="nav" id="navigation">
+            <button class="nav-btn" onclick="showSection('menu')">📋</button>
+            <button class="nav-btn center active" onclick="showSection('home')">🏠</button>
+            <button class="nav-btn" onclick="showSection('order')">🛒</button>
+        </div>
+        
+        <div class="content">
+            <!-- HOME SECTION -->
+            <div id="home" class="section active">
+                <div class="bio-section">
+                    <h2>👨‍🍳 La Nostra Storia</h2>
+                    <p>Benvenuti alla Pizzeria Bella Napoli! Dal 1952, la famiglia Rossi porta sulle vostre tavole l'autentico sapore della tradizione napoletana.</p>
+                    <p>Utilizziamo solo ingredienti freschi e di prima qualità, importati direttamente dal Sud Italia. Il nostro impasto riposa 48 ore per garantire una pizza leggera e digeribile.</p>
+                    <p>Ogni pizza è cotta nel nostro forno a legna a 450°C, per regalarvi il gusto unico della vera pizza napoletana.</p>
+                </div>
+                
+                <h2 style="color: #ff6b35; margin: 20px 0; text-align: center;">🌟 Le Nostre Specialità</h2>
+                
+                <div class="specialty-card">
+                    <h3>🍕 Pizza Bella Napoli</h3>
+                    <p>La nostra pizza signature con mozzarella di bufala DOP, pomodori San Marzano, basilico fresco e un filo d'olio extravergine. Un viaggio nel cuore di Napoli!</p>
+                </div>
+                
+                <div class="specialty-card">
+                    <h3>🧀 Pizza Quattro Formaggi Gourmet</h3>
+                    <p>Una sinfonia di sapori con gorgonzola DOP, parmigiano reggiano 24 mesi, mozzarella di bufala e pecorino romano. Per gli amanti del formaggio!</p>
+                </div>
+                
+                <div class="specialty-card">
+                    <h3>🥩 Pizza Carnivora Deluxe</h3>
+                    <p>Per i veri carnivori: salsiccia napoletana, speck Alto Adige, salame piccante, pancetta croccante e mozzarella. Potenza pura!</p>
+                </div>
+            </div>
+            
+            <!-- MENU SECTION -->
+            <div id="menu" class="section">
+                <div class="category-filter">
+                    <button class="filter-btn active" onclick="filterMenu('all')">Tutto</button>
+                    <button class="filter-btn" onclick="filterMenu('pizza')">Pizze</button>
+                    <button class="filter-btn" onclick="filterMenu('antipasti')">Antipasti</button>
+                    <button class="filter-btn" onclick="filterMenu('bevande')">Bevande</button>
+                    <button class="filter-btn" onclick="filterMenu('dolci')">Dolci</button>
+                </div>
+                
+                <div id="menuItems"></div>
+            </div>
+            
+            <!-- ORDER SECTION -->
+            <div id="order" class="section">
+                <h2 style="color: #ff6b35; margin-bottom: 20px;">📝 Riepilogo Ordine</h2>
+                <div id="orderItems"></div>
+                <div class="total-section">
+                    <h2>Totale: €<span id="totalPrice">0.00</span></h2>
+                    <button class="confirm-btn" onclick="confirmOrder()">Conferma Ordine</button>
+                </div>
+            </div>
+            
+            <!-- THANK YOU SECTION -->
+            <div id="thankYou" class="section">
+                <div class="thank-you">
+                    <h1>🎉 Grazie per il tuo ordine!</h1>
+                    <p>Il tuo ordine è stato ricevuto con successo.</p>
+                    <p>Lo staff di cucina è già al lavoro per preparare le tue delizie!</p>
+                    <p>⏱️ Tempo di attesa stimato: 15-20 minuti</p>
+                    <div class="closing-timer">
+                        L'app si chiuderà automaticamente tra <span id="countdown">5</span> secondi...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-summary" id="cartSummary" onclick="showSection('order')">
+            🛒 <span id="cartCount">0</span> articoli - €<span id="cartTotal">0.00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
